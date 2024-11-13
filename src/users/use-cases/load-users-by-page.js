@@ -15,9 +15,6 @@ export const loadUsersByPage = async (page = 1) => {
     console.log(data);
 
     const users = data.data.map( localhostUserToModel )
-    return {
-        users,
-        nextPage: data.next,
-    };
+    return users;
 
 }
